@@ -44,8 +44,8 @@ export default function HomePage() {
         </div>
         <div className="flex flex-col">
           <Image
-            width={100}
-            height={100}
+            width={1920}
+            height={1080}
             src="/profile.png"
             className="rounded-2xl md:w-64 w-2/3 mx-auto bg-size-200 bg-pos-0 hover:bg-pos-100 bg-gradient-to-r from-blue-600  via-sky-400 to-blue-600 pt-4  hover:scale-110 shadow-lg duration-500 cursor-pointer"
             alt=""
