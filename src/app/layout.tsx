@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Navbar from "@/components/navbar/navbar";
 import Head from "next/head";
+import MyLinks from "@/components/mylinks";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
       </Head>
       <body className={raleway.className}>
         <Navbar />
+        <MyLinks />
         {children}
       </body>
     </html>

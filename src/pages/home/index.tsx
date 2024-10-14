@@ -26,7 +26,7 @@ export default function HomePage() {
             <p>
               I work with React.js, Node.js, NoSql databases, Sql databases!
             </p>
-            <p>Actually working at FST Tecnologia from Campos-RJ</p>
+            <p>Actually working at SGBR Sistemas</p>
           </div>
           <div className="text-neutral-300">
             <p className="flex items-center text-lg gap-2 ">

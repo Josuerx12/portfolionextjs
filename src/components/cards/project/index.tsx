@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaCode, FaEye } from "react-icons/fa";
 import Slider from "react-slick";
-import Image from "next/image";
 
 type Project = {
   name: string;
@@ -24,6 +23,16 @@ const ProjectCard = ({ project }: { project: Project }) => {
   };
 
   const [readMore, setReadMore] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    if (paragraphRef.current) {
+      const isExceeding =
+        paragraphRef.current.scrollHeight > paragraphRef.current.clientHeight;
+      setShowButton(isExceeding);
+    }
+  }, [project.techs, readMore]);
 
   return (
     <div className="md:max-w-72 w-full relative flex flex-col justify-between shadow-md shadow-neutral-500 rounded-lg ">
@@ -48,16 +57,21 @@ const ProjectCard = ({ project }: { project: Project }) => {
       </div>
 
       <div className="px-2 md:h-28">
-        <p className={`text-justify ${readMore ? "" : "line-clamp-2"}`}>
+        <p
+          ref={paragraphRef}
+          className={`text-justify ${readMore ? "" : "line-clamp-2"}`}
+        >
           <span className="font-bold">Techs: </span>{" "}
           {project.techs.map((tech) => `${tech} `)}
         </p>
-        <button
-          onClick={() => setReadMore((prev) => !prev)}
-          className="text-blue-400 hover:text-blue-200 duration-200 capitalize"
-        >
-          {readMore ? "read less" : "read more..."}
-        </button>
+        {(showButton || readMore) && (
+          <button
+            onClick={() => setReadMore((prev) => !prev)}
+            className="text-blue-400 hover:text-blue-200 duration-200 capitalize"
+          >
+            {readMore ? "read less" : "read more..."}
+          </button>
+        )}
       </div>
 
       <div className="flex w-full">
