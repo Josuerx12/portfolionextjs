@@ -33,7 +33,7 @@ const projects = [
       "https://i.imgur.com/MgwoBQN.png",
       "https://i.imgur.com/iYMsgG8.png",
     ],
-    demo: "https://tirocerto.josuecarvalho.cloud/novoRegistro",
+    demo: "https://tirocerto.jcdev.com.br/novoRegistro",
     code: "https://github.com/Josuerx12/Tiro-Certo-Front",
   },
   {
@@ -60,7 +60,7 @@ const projects = [
       "https://i.imgur.com/MgwoBQN.png",
       "https://i.imgur.com/iYMsgG8.png",
     ],
-    demo: "https://tirocerto.josuecarvalho.cloud/novoRegistro",
+    demo: "https://tirocerto.jcdev.com.br/novoRegistro",
     code: "https://github.com/Josuerx12/Tiro-Certo-Backend",
   },
   {
