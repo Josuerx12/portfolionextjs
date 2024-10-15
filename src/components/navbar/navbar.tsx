@@ -59,6 +59,7 @@ const Navbar = () => {
             key={i}
             onClick={() => {
               setMobileOpen(false);
+              handleScrollTo(value);
             }}
           >
             {value}
